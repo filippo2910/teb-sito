@@ -1,0 +1,321 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f8f9fa;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (max-width: 991.98px) {
+    .container-fluid {
+        display: flex;
+        justify-content: center !important;
+    }
+}
+
+/* SEZIONI COMUNI */
+.rounded-section {
+    border-radius: 20px;
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.who-we-are {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.who-we-are>div {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 992px) {
+    .who-we-are>div {
+        width: 49%;
+        height: 500px;
+    }
+
+    .who-we-are>div:nth-child(2) {
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .who-we-are {
+        flex-direction: column-reverse !important;
+    }
+
+    .who-we-are>div:nth-child(2) {
+        padding-bottom: 1rem;
+    }
+}
+
+/* IMMAGINE LATERALE */
+.img-side {
+    background-image: url(/img/intern.jpeg);
+    background-size: cover;
+    background-position: center;
+    flex: 1 1 0;
+    min-width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+    height: 60vh;
+    min-height: 400px;
+    max-height: 600px;
+}
+
+@media (min-width: 992px) {
+    .img-side {
+        margin: 0 1rem 1rem 1rem;
+        min-width: 300px;
+        height: 500px;
+    }
+}
+
+/* HERO / JUMBOTRON */
+.hero {
+    background-color: #acacac;
+    color: white;
+    padding: 5rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#jumbo {
+    background-image: url(img/jumbo-azienda.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 0 !important;
+    height: 300px;
+}
+
+@media (min-width: 768px) {
+    #jumbo {
+        height: 500px;
+    }
+}
+
+/* LOGO E IMMAGINI */
+.logo-name>img,
+.left-container>img {
+    filter: invert(1);
+    max-width: 100px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 2rem 1rem;
+    border-radius: 20px 20px 0 0;
+    gap: 2rem;
+}
+
+/* Testo nei paragrafi */
+footer p {
+    margin: 0 0 0.5rem 0 !important;
+}
+
+/* Colonne del footer */
+.left-container,
+.right-container {
+    width: 100%;
+}
+
+/* Layout a due colonne su desktop */
+@media (min-width: 992px) {
+    .left-container,
+    .right-container {
+        width: 50%;
+    }
+}
+
+
+/* NAV */
+.nav-link {
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* CAROUSEL CONTAINER */
+.carousel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.carousel-container>div {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 992px) {
+    .carousel-container>div {
+        width: 49%;
+        height: 500px;
+    }
+
+    .carousel-container>div:nth-child(1) {
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .carousel-container>div {
+        height: auto;
+    }
+}
+
+/* CAROUSEL STRUCTURE */
+.mobile-carousel {
+    display: none;
+}
+
+@media (max-width: 991.98px) {
+    .carousel {
+        display: none;
+    }
+
+    .mobile-carousel {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .mobile-carousel > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+
+    .mobile-carousel > div > div {
+        position: absolute;
+        color: white !important;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .mobile-carousel img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        object-fit: cover;
+        background-color: #f9f9f9;
+    }
+
+    .mobile-carousel .caption {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        color: #333;
+        display: block;
+    }
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    padding: 0 !important;
+    height: 300px;
+    overflow: hidden;
+}
+
+@media (min-width: 992px) {
+    .carousel {
+        height: 400px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .carousel {
+        display: none;
+    }
+}
+
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    background-color: #f9f9f9;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+
+/* FRECCE CAROUSEL */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
